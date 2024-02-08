@@ -18,9 +18,8 @@
 
 | |1|2|3|4|5|6|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|1주차(큐/스택)|[올바른 괄호](https://school.programmers.co.kr/learn/courses/30/lessons/12909)|[프로세스](https://school.programmers.co.kr/learn/courses/30/lessons/42587)|[다리를 지나는 트럭](https://school.programmers.co.kr/learn/courses/30/lessons/42583)|[스택수열](https://www.acmicpc.net/problem/1874)|[요세푸스 문제](https://www.acmicpc.net/problem/1158)|[프린터 큐]([요세푸스 문제](https://www.acmicpc.net/problem/1158)|)|
+|1주차(큐/스택)|[올바른 괄호](https://school.programmers.co.kr/learn/courses/30/lessons/12909)|[프로세스](https://school.programmers.co.kr/learn/courses/30/lessons/42587)|[다리를 지나는 트럭](https://school.programmers.co.kr/learn/courses/30/lessons/42583)|[스택수열](https://www.acmicpc.net/problem/1874)|[요세푸스 문제](https://www.acmicpc.net/problem/1158)|[프린터 큐](https://www.acmicpc.net/problem/1966)|
 |2주차(완전탐색)|[]()| []()| []()| []()| []()| []()| []()|
-## **💻 문제 목록**
 
 
 ------
