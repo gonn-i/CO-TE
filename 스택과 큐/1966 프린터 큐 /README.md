@@ -73,7 +73,7 @@ let input = fs.readFileSync(filePath).toString().split("\n");
 
 let input = fs.readFileSync(__dirname + filePath).toString().split("\n");
 ```
-(참고링크)[https://likethefirst.tistory.com/m/entry/JavaScript-Error-ENOENT-no-such-file-or-directory]
+[참고링크](https://likethefirst.tistory.com/m/entry/JavaScript-Error-ENOENT-no-such-file-or-directory)
 
 ----
 

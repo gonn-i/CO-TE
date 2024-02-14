@@ -1,13 +1,13 @@
+[문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/42587)
+
 ## 접근 방향 설명 / 해설 
 백준 문제와 똑같은 문제였다! 그래서 해설과 설명 이하 생략 🤐
 
-(1966 프린터큐)[https://github.com/gonn-i/CO-TE-study/tree/master/%EC%8A%A4%ED%83%9D%EA%B3%BC%20%ED%81%90/1966%20%ED%94%84%EB%A6%B0%ED%84%B0%20%ED%81%90%20]
+[1966 프린터큐](https://github.com/gonn-i/CO-TE-study/tree/master/%EC%8A%A4%ED%83%9D%EA%B3%BC%20%ED%81%90/1966%20%ED%94%84%EB%A6%B0%ED%84%B0%20%ED%81%90%20)
 
 ---
-## 프로그래머스 LEVEL2 프로세스
-[문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/42587)
 
-**문제 설명**
+## 문제 설명
 운영체제의 역할 중 하나는 컴퓨터 시스템의 자원을 효율적으로 관리하는 것입니다. 
 이 문제에서는 운영체제가 다음 규칙에 따라 프로세스를 관리할 경우 특정 프로세스가 몇 번째로 실행되는지 알아내면 됩니다.
 
