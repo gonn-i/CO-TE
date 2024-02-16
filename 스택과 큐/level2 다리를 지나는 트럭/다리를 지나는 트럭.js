@@ -4,18 +4,20 @@ function solution(bridge_length, weight, truck_weights) {
     let time = 0;
     
     console.log(on_the_bridge)
+    on_the_bridge.shift()
     time += 1;
     weight_sum += truck_weights[0]
     on_the_bridge.push(truck_weights.shift())
-    
-    while(sum + truck_weights[1] && truck_weights.length !== 0) {
-        weight_sum += truck_weights[0]
-        if(weight_sum <= weight && on_the_bridge.length <= bridge_length ) {
-            // 다리 위 기차 +1 
-            on_the_bridge.push(truck_weights.shift());
-        } else {
-            
-            
+   
+    while(weight_sum > 0){
+        time += 1;
+        weight_sum -= on_the_bridge.shift();
+        if(weight_sum  + truck_weights[1] <= weight && truck_weights.length !== 0){
+            weight_sum += truck_weights[0]
+            on_the_bridge.push(truck_weights.shift())
         }
+        else on_the_bridge.push(0)
     }
+    
+return time
 }
