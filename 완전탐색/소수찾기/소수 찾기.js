@@ -28,6 +28,6 @@ function solution(numbers) {
         }
         if (contain) answer.push(num);
     });
-
+    
     return answer;
 }
