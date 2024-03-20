@@ -1,4 +1,4 @@
-[문제링크](https://www.acmicpc.net/problem/1158)
+[문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/42747)
 
 ## 접근 방향 설명
 1) 주어진 배열의 길이가 h_idx의 최댓값이 될 수 있으므로, h_idx == c.length [3,3,3] => 3 
