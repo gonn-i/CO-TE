@@ -5,13 +5,15 @@ const input = fs.readFileSync(__dirname + filePath).toString().trim().split("\n"
 const T = input[0];
 const testCases = input.slice(1);
 let answer = [];
+// console.log(testCases)
 
 for (let i = 0; i < T; i++) {
-    let mid = [];
+    let temp = [];
     let pick = 0;
     let nthCase = [];
 
     const N = testCases[i];
+    // console.log(N)
 
     nthCase.push(
         testCases
@@ -22,17 +24,17 @@ for (let i = 0; i < T; i++) {
 
     let standard = nthCase[0][0][1];  //서류 1등의 면접 점수 (기준점)
 
+    // console.log(nthCase)
     // console.log(standard)
     let standard_2 = '';
-    for(let i=0; i < nthCase[0].length; i++ ) {
-        if(nthCase[0][i][1] <= standard) mid.push(nthCase[0][i])
-        if(nthCase[0][i][1] === '1')  standard_2 = nthCase[0][i][0]
-    }
-    // console.log(mid)
 
-    for (let i=0; i < mid.length; i++){
-        if(mid[i][0] <= standard_2) pick++;
+    for(let i=0; i < nthCase[0].length; i++ ) {
+        if(nthCase[0][i][1] <= standard) pick++;
+        standard = nthCase[0][i][1];
     }
+    // console.log(temp)
+    // console.log(standard_2)
+
     answer.push(pick)
 }
 
