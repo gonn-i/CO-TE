@@ -6,3 +6,4 @@ let input = fs
   .split('\n');
 
 let [N, M] = input.shift().split(' ');
+1;
