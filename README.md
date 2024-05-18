@@ -1,5 +1,8 @@
 <h1 align="center"> 코딩 테스트 공부 ! </h1>
 
+[![Solved.ac
+프로필](http://mazassumnida.wtf/api/generate_badge?boj={rlarhdms6828})](https://solved.ac/{handle})
+
 ---
 
 # ✏️ **코딩테스트 유형별 기록 Repository**
