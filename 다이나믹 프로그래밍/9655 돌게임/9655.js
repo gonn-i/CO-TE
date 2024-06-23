@@ -5,11 +5,7 @@ let N = +fs
   .toString()
   .trim();
 
-// 상 창 상 창 상
-// 상상상 창 상
-// 상 창창창 상
-
-let turn = Math.floor(N / 3); // turn이 홀수면 SK, 짝수이면 CY
+let turn = Math.floor(N / 3);
 turn += N % 3;
 
 console.log(turn % 2 == 1 ? 'SK' : 'CY');
