@@ -1,4 +1,4 @@
-[문제링크](https://www.acmicpc.net/problem/9655)
+[문제링크](https://www.acmicpc.net/problem/9095)
 
 ## 접근 방향 설명
 
