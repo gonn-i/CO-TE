@@ -1,46 +1,43 @@
-const fs = require("fs");
-const filePath = process.platform === "linux" ? "/dev/stdin" : "/input.txt";
-const input = fs.readFileSync(__dirname + filePath).toString().trim().split("\n");
+const fs = require('fs');
+const filePath = process.platform === 'linux' ? '/dev/stdin' : '/input.txt';
+const input = fs
+  .readFileSync(__dirname + filePath)
+  .toString()
+  .trim()
+  .split('\n');
 
 const T = input[0];
 const testCases = input.slice(1);
 let answer = [];
-// console.log(testCases)
 
 for (let i = 0; i < T; i++) {
-    let temp = [];
-    let pick = 0;
-    let nthCase = [];
+  let temp = [];
+  let pick = 1;
+  let nthCase = [];
 
-    const N = testCases[i];
-    // console.log(N)
+  const N = testCases[i];
 
-    nthCase.push(
-        testCases
-            .splice(i+1, N)
-            .map((e) => e.split(" "))
-            .sort(compare)
-            )
+  nthCase.push(
+    ...testCases
+      .splice(i + 1, N)
+      .map((e) => e.split(' ').map(Number))
+      .sort(compare)
+  );
 
-    let standard = nthCase[0][0][1];  //서류 1등의 면접 점수 (기준점)
+  let standard = nthCase[0][1];
 
-    // console.log(nthCase)
-    // console.log(standard)
-    let standard_2 = '';
-
-    for(let i=0; i < nthCase[0].length; i++ ) {
-        if(nthCase[0][i][1] <= standard) pick++;
-        standard = nthCase[0][i][1];
+  for (let i = 1; i < nthCase.length; i++) {
+    if (nthCase[i][1] <= standard) {
+      pick++;
+      standard = nthCase[i][1];
     }
-    // console.log(temp)
-    // console.log(standard_2)
+  }
 
-    answer.push(pick)
+  answer.push(pick);
 }
 
-console.log(answer.join('\n'))
+console.log(answer.join('\n'));
 
 function compare(a, b) {
-    return a[0] - b[0];
+  return a[0] - b[0];
 }
-
