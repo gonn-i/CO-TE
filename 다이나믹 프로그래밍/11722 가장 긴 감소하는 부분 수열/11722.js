@@ -20,7 +20,6 @@ for (let i = 1; i < nums.length; i++) {
     }
   }
   dp[i] = max + 1;
-  ans = Math.max(dp[i], ans);
 }
 
-console.log(ans);
+console.log(Math.max(...dp));
