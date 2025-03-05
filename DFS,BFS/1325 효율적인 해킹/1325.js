@@ -1,4 +1,3 @@
-const { hasSubscribers } = require('diagnostics_channel');
 let fs = require('fs');
 let filePath = process.platform === 'linux' ? '/dev/stdin' : '/input.txt';
 let input = fs
@@ -7,40 +6,45 @@ let input = fs
   .trim()
   .split('\n');
 
-let L = input.length;
-let graph = [...new Array(L + 1)].map(() => []);
+let [N, M] = input.shift().split(' ').map(Number);
+let graph = Array.from({ length: N + 1 }, () => []);
 
-for (let i = 0; i < L; i++) {
-  let [N, M] = input[i].split(' ').map(Number);
-  graph[M].push(N);
+for (let i = 0; i < M; i++) {
+  let [a, b] = input[i].split(' ');
+  graph[+b].push(+a);
 }
 
-let haked = 0;
-let haked_Arr = [];
+let max = 0;
+let result = [];
 
-// dfs
-for (let i = 1; i < L + 1; i++) {
-  let needvisite = [];
-  let visited = [];
+const bfs = (start) => {
+  let queue = [start];
+  let visited = new Array(N + 1).fill(false);
+  let count = 0;
+  let idx = 0;
+  visited[start] = true;
 
-  needvisite.push(i);
-  while (needvisite.length > 0) {
-    let target = needvisite.shift();
-    if (!visited.includes(target)) {
-      visited.push(target);
-      needvisite = [...needvisite, ...graph[target].sort((a, b) => a - b)];
+  while (queue.length > idx) {
+    let target = queue[idx++];
+    for (let v of graph[target]) {
+      if (visited[v]) continue;
+      queue.push(v);
+      count++;
+      visited[v] = true;
     }
   }
-  haked_Arr.push(visited.length);
-}
 
-let max = Math.max(...haked_Arr);
-let ans = [];
+  return count;
+};
 
-for (let i = 0; i < haked_Arr.length; i++) {
-  if (haked_Arr[i] == max) {
-    ans.push(i + 1);
+for (let i = 1; i <= N; i++) {
+  let count = bfs(i);
+  if (count > max) {
+    max = count;
+    result = [i];
+  } else if (count === max) {
+    result.push(i);
   }
 }
 
-console.log(ans.join(' '));
+console.log(result.join(' '));
