@@ -1,3 +1,4 @@
+// 10m
 function solution(s) {
     let str_Arr = s.split('')
     let temp = [];
