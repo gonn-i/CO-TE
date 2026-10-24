@@ -1,3 +1,4 @@
+// 9m 31s
 function solution(n, times) {
     let start = 1
     let end = Math.max(...times) * n // 젤 오래 * 명수 -> 최장 t
